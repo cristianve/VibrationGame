@@ -27,14 +27,23 @@ function App() {
             <ButtonScore />
           </Grid>
         </Grid>
-        <Grid xs={12}>
+
+        <Grid
+          container
+          spacing={4}
+          direction="row"
+          justify="center"
+          alignItems="center"
+        >
+
+        <Grid item xs={4}>
           <h3 align="center">Orientation:</h3>
           <h4 align="center">X-axis (β):</h4>
           <h4 align="center">Y-axis (γ):</h4>
           <h4 align="center">Z-axis (α):</h4>
         </Grid>
 
-        <Grid xs={12}>
+        <Grid item xs={4}>
           <h3 align="center">Accelerometer:</h3>
           <h4 align="center">X-axis:</h4>
           <h4 align="center">Y-axis:</h4>
@@ -42,11 +51,13 @@ function App() {
         </Grid>
 
 
-        <Grid xs={12}>
+        <Grid item xs={4}>
           <h3 align="center">Gyroscope</h3>
           <h4 align="center">X-axis:</h4>
           <h4 align="center">Y-axis:</h4>
           <h4 align="center">Z-axis:</h4>
+        </Grid>
+
         </Grid>
         <br/>
       </Paper>
