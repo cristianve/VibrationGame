@@ -1,6 +1,6 @@
 import ButtonAppBar from "./ButtonAppBar.js";
 import ButtonPlay from "./ButtonPlay.js";
-import ButtonScore from "./ButtonScore.js";
+//import ButtonScore from "./ButtonScore.js";
 import Footer from "./Footer.js";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
@@ -20,12 +20,28 @@ function App() {
           justify="center"
           alignItems="center"
         >
-          <Grid item xs={12}>
+          {/*
+                  <Grid item xs={12}>
             <ButtonPlay />
           </Grid>
+               */}
+
           <Grid item xs={12}>
+            <a
+              id="start_demo"
+              class="btn btn-lg btn-success py-1"
+              href="#"
+              role="button"
+            >
+              <ButtonPlay />
+            </a>
+          </Grid>
+
+          {/*
+             <Grid item xs={12}>
             <ButtonScore />
           </Grid>
+             */}
         </Grid>
 
         <Grid
@@ -35,33 +51,33 @@ function App() {
           justify="center"
           alignItems="center"
         >
-
-        <Grid item xs={4}>
-          <h3 align="center">Orientation:</h3>
-          <h4 align="center">X-axis (β):</h4>
-          <h4 align="center">Y-axis (γ):</h4>
-          <h4 align="center">Z-axis (α):</h4>
+          <Grid item xs={4}>
+            <h3>Orientation</h3>
+            <ul>
+              <h4>
+                <li>
+                  X-axis (&beta;): <span id="Orientation_b">0</span>
+                  <span>&deg;</span>
+                </li>
+              </h4>
+              <h4>
+                <li>
+                  Y-axis (&gamma;): <span id="Orientation_g">0</span>
+                  <span>&deg;</span>
+                </li>
+              </h4>
+              <h4>
+                <li>
+                  Z-axis (&alpha;): <span id="Orientation_a">0</span>
+                  <span>&deg;</span>
+                </li>
+              </h4>
+            </ul>
+          </Grid>
         </Grid>
-
-        <Grid item xs={4}>
-          <h3 align="center">Accelerometer:</h3>
-          <h4 align="center">X-axis:</h4>
-          <h4 align="center">Y-axis:</h4>
-          <h4 align="center">Z-axis:</h4>
-        </Grid>
-
-
-        <Grid item xs={4}>
-          <h3 align="center">Gyroscope</h3>
-          <h4 align="center">X-axis:</h4>
-          <h4 align="center">Y-axis:</h4>
-          <h4 align="center">Z-axis:</h4>
-        </Grid>
-
-        </Grid>
-        <br/>
+        <br />
       </Paper>
-      <br/>
+      <br />
       <Paper>
         <Footer />
       </Paper>
