@@ -120,7 +120,9 @@ class Main extends React.Component {
             <Grid item xs={12}>
               <Paper className={classes.buttonPlay}>
                 <Typography component="h5" variant="h4" align="center">
-                  <b>Welcome to Vibration Game! </b>🤗🤗
+                  <b>Welcome to Vibration Game! </b>
+                  <br />
+                  🤗🤗
                 </Typography>
 
                 <a

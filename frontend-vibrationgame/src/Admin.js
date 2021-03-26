@@ -44,15 +44,12 @@ class Admin extends React.Component {
             <Paper className={classes.paper}>
               <Title>Iniciar partida</Title>
               <Grid item xs={12}>
-                <a
-                  href="/admin"
-                  style={{ textDecoration: "none" }}
-                >
+                <a href="/admin" style={{ textDecoration: "none" }}>
                   <ButtonPlay />
                 </a>
               </Grid>
             </Paper>
-            <br/>
+            <br />
           </Grid>
         </Paper>
         <br />
