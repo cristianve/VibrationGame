@@ -4,7 +4,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
-import LaSalleLogo from "../logo-lasalle-estudy.png";
+import LaSalleLogo from "../assets/logo-lasalle-estudy.png";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,7 +34,7 @@ export default function Header() {
           >
             <img src={LaSalleLogo} alt="LaSalle logo" />
           </IconButton>
-          <Typography align="center" variant="h6" className={classes.title}>
+          <Typography align="center" variant="h5" className={classes.title}>
             Vibration Game
           </Typography>
         </Toolbar>

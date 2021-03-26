@@ -51,10 +51,11 @@ const useStyles = makeStyles((theme) => ({
 
 const steps = ["Get Started!", "First Pattern", "Last Pattern"];
 
-function getStepContent(step) {
+function getStepContent(step, randomName) {
+  console.log(randomName);
   switch (step) {
     case 0:
-      return <LandingPage />;
+      return <LandingPage randomName={randomName} />;
     case 1:
       return <FirstPattern />;
     case 2:
@@ -64,7 +65,7 @@ function getStepContent(step) {
   }
 }
 
-export default function Checkout() {
+export default function Checkout(props) {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
 
@@ -78,9 +79,6 @@ export default function Checkout() {
 
       <main className={classes.layout}>
         <Paper className={classes.paper}>
-          <Typography component="h5" variant="h4" align="center">
-            Welcome to Vibration Game! 🤗🤗
-          </Typography>
           <Stepper activeStep={activeStep} className={classes.stepper}>
             {steps.map((label) => (
               <Step key={label}>
@@ -95,13 +93,14 @@ export default function Checkout() {
                   Thank for playing!🎉🎉
                 </Typography>
                 <Typography variant="subtitle1">
-                  Your total score during the game is : 7.92/10. Thanks
-                  Budy#3214
+                  Your total score during the game is : 7.92/10. Thanks:
+                  <br />
+                  {props.randomName}
                 </Typography>
               </React.Fragment>
             ) : (
               <React.Fragment>
-                {getStepContent(activeStep)}
+                {getStepContent(activeStep, props.randomName)}
                 <div className={classes.buttons}>
                   <Button
                     variant="contained"

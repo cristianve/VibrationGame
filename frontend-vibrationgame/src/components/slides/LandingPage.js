@@ -1,16 +1,27 @@
-
-import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
-
-export default function LandingPage() {
+import React from "react";
+import Grid from "@material-ui/core/Grid";
+import CircularProgress from "@material-ui/core/CircularProgress";
+export default function LandingPage(props) {
   return (
     <React.Fragment>
-       <h3>Your name: <b>Budy#3212</b> </h3>
-      
+      <Grid
+        container
+        spacing={4}
+        direction="column"
+        justify="center"
+        alignItems="center"
+      >
+        <h3>Your assigned nickname: </h3>{" "}
+        <h1>
+          {" "}
+          {console.log("Props:" + props.randomName)}
+          <b>{props.randomName}</b>
+        </h1>
+        <CircularProgress />
+        <h3>
+          <b>Waiting for the administrator to start the game!😁</b>
+        </h3>
+      </Grid>
     </React.Fragment>
   );
 }
