@@ -21,7 +21,7 @@ export default function IconLabelButtons() {
         className={classes.button}
         startIcon={<PlayArrow />}
       >
-        Play
+        Ready
       </Button>
     </div>
   );

@@ -14,11 +14,12 @@ function createData(id, date, name, shipTo, amount) {
 }
 
 const rows = [
-  createData(0, "16 Mar, 2019 - 18:00", "ElvisPresley#3212", "Lobby", 6.25),
-  createData(1, "16 Mar, 2019 - 18:00", "PaulMcCartney#4412", "Lobby", 8.2),
-  createData(2, "16 Mar, 2019 - 18:00", "TomScholz#1212", "Lobby", 9.81),
-  createData(3, "16 Mar, 2019 - 18:00", "MichaelJackson#0001", "Game", 4.39),
-  createData(4, "15 Mar, 2019 - 18:00", "BruceSpringsteen#2121", "Lobby", 2.79),
+  createData(0,1, "ElvisPresley#3212", "CONNECTED", "START"),
+  createData(1,1, "PaulMcCartney#4412", "CREATED", "START"),
+  createData(2,1, "TomScholz#1212", "WAITING", "START"),
+  createData(3,1, "MichaelJackson#0001", "JOINED", "START"),
+  createData(4,1, "BruceSpringsteen#2121", "PLAYING", "START"),
+  createData(5,1, "Test#2121", "END", "START"),
 ];
 
 const useStyles = makeStyles((theme) => ({
@@ -35,10 +36,11 @@ export default function Orders() {
       <Table size="small">
         <TableHead>
           <TableRow>
-            <TableCell>Hora de entrada</TableCell>
-            <TableCell>Name</TableCell>
-            <TableCell>Status</TableCell>
-            <TableCell align="right">Puntuación</TableCell>
+           
+            <TableCell>GAME_ID</TableCell>
+            <TableCell>USERNAME</TableCell>
+            <TableCell>SOCKET_STATE</TableCell>
+            <TableCell align="right">SOCKET_ACTION</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
